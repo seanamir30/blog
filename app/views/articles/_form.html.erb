@@ -1,6 +1,13 @@
 
 <%= form_with class:'max-h-screen h-screen', model: article, url: url do |f| %>
-<h1 class="text-white font-black font-extrabold p-4">Create a Post</h1>
+<h1 class="text-white font-black font-extrabold p-4">
+    <% if article.id? %> 
+        Update
+    <% else %>
+        Create
+    <% end %>
+    a Post
+</h1>
 
 <p>
     <% if article.errors.any? %>
