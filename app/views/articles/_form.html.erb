@@ -4,9 +4,9 @@
 
 <p>
     <% if article.errors.any? %>
-        <ul>
+        <ul class="fixed inset-x-0 bottom-0 flex flex-col items-center text-white text-center">
             <% article.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
+            <li class="bg-red-100 border m-1 border-red-400 text-red-700 px-4 py-3 rounded"><%= message %></li>
             <% end %>
         </ul>
     <% end %>
